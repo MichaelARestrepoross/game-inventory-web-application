@@ -12,8 +12,5 @@ form.addEventListener('submit', (event) => {
 
     // this will clear the inputs from the form
     form.reset();
-    console.log("Name:",event.target.name.value);
-    console.log("Price:$",event.target.price.value);
-    console.log("Rating:",event.target.rating.value);
-    console.log("Description:",event.target.description.value);
+
 });
