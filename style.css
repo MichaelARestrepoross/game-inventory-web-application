@@ -182,33 +182,40 @@ section {
 
 
 
-.rating-options {
-    display: flex;
 
+
+
+
+  .rating-options {
+    display: flex;
+    align-items: center;
 }
 
 .rating-options label {
-    display: flex; /* Make labels a flex container */
-
-
+    display:inline;    
+    align-items: center;
+    margin-right: 10px; /* Add some spacing between the radio buttons and labels */
+    width: 100px;
 }
 
 .rating-options input[type="radio"] {
     margin-right: 5px; /* Add spacing between radio buttons and labels */
+    width: auto;
+}
+  
+
+form 
+form button[type="submit"],
+button {
+  background: #73956f;
+  border: none;
+  border-radius: 5px;
+  color: #f7f7f7;
+  cursor: pointer;
+  margin: 10px 0px;
+  padding: 10px;
 }
 
-  form 
-  form button[type="submit"],
-  button {
-    background: #73956f;
-    border: none;
-    border-radius: 5px;
-    color: #f7f7f7;
-    cursor: pointer;
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
   form button[type="submit"]:hover,
   button:hover {
     background: #46494c;
@@ -218,5 +225,10 @@ section {
     background:blue;
   }
 
+
+  .rating-options{
+ 
+
+  }
   
   
