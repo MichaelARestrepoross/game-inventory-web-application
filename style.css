@@ -88,6 +88,7 @@ h1 {
   @media (max-width: 500px) {
     .games-store ul {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0px 30px;
     }
     .games-store {
         text-align: center;
