@@ -41,7 +41,7 @@ function gameTemplate(name, price, imageURL, rating, description) {
     img.onerror = function() {
         // Image failed to load, display "No Game Image" message
         const noImageMessage = li.querySelector('.no-image-message');
-        noImageMessage.style.display = 'block';
+        noImageMessage.style.display = 'flex';
         img.style.display = 'none'; // Hide the image
     };
 
@@ -56,7 +56,6 @@ function gameTemplate(name, price, imageURL, rating, description) {
         <div class="image-container" style="position: relative; text-align: center;">
             ${img.outerHTML}
             <div class="no-image-message" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">No Game Image</div>
-
         </div>
         <p><strong>Name</strong>: ${name}</p>
         <p><strong>Price</strong>: $${price}</p>
@@ -69,7 +68,7 @@ function gameTemplate(name, price, imageURL, rating, description) {
 
     if (!imageURL || imageURL === 'path-to-default-image.jpg') {
         const noImageMessage = li.querySelector('.no-image-message');
-        noImageMessage.style.display = 'block';
+        noImageMessage.style.display = 'flex';
         img.style.display = 'none'; // Hide the image
     }
 
