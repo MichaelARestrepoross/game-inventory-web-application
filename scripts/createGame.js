@@ -34,46 +34,54 @@ function gameTemplate(name, price, imageURL, rating, description) {
       event.target.closest(".single-game").remove();
     });
 
-    if(name, price, imageURL, rating, description){
-        li.innerHTML=
-          `
-          <div class="image-container">
-          <img src="${imageURL || 'path-to-default-image.jpg'}" alt="Game Image">
-          <div class="no-image-message">No Game Image</div>
+    
+    const img = document.createElement("img");
+    img.alt = "Game Image";
+    
+    img.onerror = function() {
+        // Image failed to load, display "No Game Image" message
+        const noImageMessage = li.querySelector('.no-image-message');
+        noImageMessage.style.display = 'block';
+        img.style.display = 'none'; // Hide the image
+    };
+
+    if (imageURL) {
+        img.src = imageURL;
+    } else {
+        // If no image URL is provided, set the default image
+        img.src = 'path-to-default-image.jpg';
+    }
+
+    li.innerHTML = `
+        <div class="image-container" style="position: relative; text-align: center;">
+            ${img.outerHTML}
+            <div class="no-image-message" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">No Game Image</div>
+
         </div>
         <p><strong>Name</strong>: ${name}</p>
         <p><strong>Price</strong>: $${price}</p>
         <p><strong>Rating</strong>: ${rating}</p>
-        <p><Strong>Description:</Strong></p>
+        <p><strong>Description</strong>:</p>
         <div class="description-box">
-          <p>${description}</p>
-        <div
-        `;
-  
-        li.append( inStockButton);
-        li.append( removeButton);
-    }
-    if(name, price, rating, description){
-      li.innerHTML=
-          `
-          <div class="image-container">
-          <div class="no-image-message">No Game Image</div>
-          </div>
-        <p><strong>Name</strong>: ${name}</p>
-        <p><strong>Price</strong>: $${price}</p>
-        <p><strong>Rating</strong>: ${rating}</p>
-        <p><Strong>Description:</Strong></p>
-        <div class="description-box">
-          <p>${description}</p>
-        <div
-        `;
+            <p>${description}</p>
+        </div>
+    `;
 
-      li.append( inStockButton);
-      li.append( removeButton);
+    if (!imageURL || imageURL === 'path-to-default-image.jpg') {
+        const noImageMessage = li.querySelector('.no-image-message');
+        noImageMessage.style.display = 'block';
+        img.style.display = 'none'; // Hide the image
     }
+
+    li.append(inStockButton);
+    li.append(removeButton);
+
     return li;
 }
 
+
+createGame("Game 1", 29.99, "image-urll.jpg", "4.5", "A great game for all ages.");
+createGame("Game 2", 19.99,"",   "3.8", "An exciting adventure awaits!");
 // grab all of the li elements in the html 
 const listItems = document.querySelectorAll("button.delete-button");
 // loop through the elements 
