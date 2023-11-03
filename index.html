@@ -8,11 +8,13 @@
 
     <script defer src="./scripts/createGame.js"></script>
    <script defer src="./scripts/inStock.js"></script>
+   <script defer src="./scripts/count.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
         <h1>Game store</h1>
+        
     </header>
     <main>
         <section class ="new-game-form">
@@ -37,7 +39,7 @@
                     <label for="rating-E">E for Everone</label>
         
                     <input type="radio" id="rating-T" name="rating" value="T" required>
-                    <label for="rating-T">T for Teen</label>
+                    <label for="rating-T">T for Teen.</label>
         
                     <input type="radio" id="rating-M" name="rating" value="M" required>
                     <label for="rating-M">M for Mature</label>
@@ -54,7 +56,7 @@
 
         </section>
         <section class = "games-store">
-            <h2>Games in store</h2>
+            <h2>Games in store: <span class="games-count">(Games:1)</span></h2>
             <ul class=" games">
                 <li class = "single-game">
                     <div class="image-container">
@@ -70,6 +72,31 @@
                     </div>
                     <!-- check box -->
                     <!-- in stock checks if the tesxt is "In stock" to change it between the two -->
+                    <button class = "in-stock">In Stock</button>
+                    <button class = "delete-button">Remove Game</button>
+                </li>
+                <li class = "single-game">
+                    <div class="image-container">
+                        <div class="no-image-message" 
+                        style="display: flex; position: flex; top: 50%;
+                         left: 50%; transform: translate(-50%, -50%);"
+                        >No Game Image</div>
+                    </div>
+                    <p><strong>Name</strong>: Game 1</p>
+                    <p><strong>price</strong>: $30</p>
+                    <p><strong>Rating</strong>: T</p>
+                    <p><Strong>Description:</Strong></p>
+                    <div class="description-box">
+                        <p>Game 1 is a highly anticipated and thrilling upcoming title that has managed
+                             to keep gamers on the edge of their seats with its intriguing secrecy. 
+                             While there are no official released images to showcase its visual splendor,
+                              this very mystery is part of what makes the game so enticing. 
+                              The game promises to be a captivating and innovative experience, 
+                              and its lack of revealed visuals only adds to the anticipation. 
+                              Gamers are eagerly awaiting any glimpse into the world and gameplay that Game 1 will offer,
+                              making it a hot topic of conversation in the gaming community. With its shroud of secrecy,
+                              Game 1 is poised to surprise and delight players in ways that only a truly remarkable gaming experience can.</p>
+                    </div>
                     <button class = "in-stock">In Stock</button>
                     <button class = "delete-button">Remove Game</button>
                 </li>

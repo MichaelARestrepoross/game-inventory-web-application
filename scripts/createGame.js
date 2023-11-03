@@ -1,14 +1,14 @@
 
 // generateGame
 function createGame(name, price, imageURL, rating, description) {
-
-  //instead of creating an li. im going to call the contactTmeplate function
+  count++;
+  updateCount(count);
   const li = gameTemplate(name, price, imageURL, rating, description)
 
     //Grab the ul list from the DOM
     const ul = document.querySelector("ul");
-    // append the newly created li
     ul.append(li);
+
 }
 
 function gameTemplate(name, price, imageURL, rating, description) {
@@ -26,12 +26,12 @@ function gameTemplate(name, price, imageURL, rating, description) {
 
     // create a remove game button
     const removeButton =document.createElement("button");
-    // add text to the button 'Remove contact'
     removeButton.textContent = 'Remove Game'
-    // add an event listener to the button to remove the li
     removeButton.addEventListener('click', (event)=>{
-      // find the closest li to this button and remove it
-      event.target.closest(".single-game").remove();
+    // find the closest li to this button and remove it
+    event.target.closest(".single-game").remove();
+    count--;
+    updateCount(count);
     });
 
     
@@ -39,10 +39,10 @@ function gameTemplate(name, price, imageURL, rating, description) {
     img.alt = "Game Image";
     
     img.onerror = function() {
-        // Image failed to load, display "No Game Image" message
-        const noImageMessage = li.querySelector('.no-image-message');
-        noImageMessage.style.display = 'flex';
-        img.style.display = 'none'; // Hide the image
+      // Image failed to load, display "No Game Image" message
+      const noImageMessage = li.querySelector('.no-image-message');
+      noImageMessage.style.display = 'flex';
+      img.style.display = 'none'; // Hide the image
     };
 
     if (imageURL) {
@@ -71,23 +71,22 @@ function gameTemplate(name, price, imageURL, rating, description) {
         noImageMessage.style.display = 'flex';
         img.style.display = 'none'; // Hide the image
     }
-
+    
     li.append(inStockButton);
     li.append(removeButton);
-
+    
     return li;
 }
 
 
-createGame("Game 1", 29.99, "image-urll.jpg", "4.5", "A great game for all ages.");
-createGame("Game 2", 19.99,"",   "3.8", "An exciting adventure awaits!");
+
 // grab all of the li elements in the html 
 const listItems = document.querySelectorAll("button.delete-button");
-// loop through the elements 
-// add event listener to each element 
 for (item of listItems){
   item.addEventListener('click', (event)=>{
     // to remove the element 
+    count--;
+    updateCount(count);
     event.target.closest(".single-game").remove();
   })
 }

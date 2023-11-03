@@ -36,7 +36,7 @@ h1 {
     margin: 10px;
     width: 80%;
     max-width: 1000px;
-    min-width: 400px;
+    min-width: 244px;
     border: 2px solid black;
     border-radius: 5px;
     margin: 0px auto;
@@ -64,41 +64,9 @@ h1 {
     /* padding: 20px; */
   }
 
-  @media (max-width: 1020px) {
-    .games-store ul {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .games-store {
-        text-align: center;
-        width: 620px;
-        
-    }
-  }
-  
-  @media (max-width: 790px) {
-    .games-store ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .games-store {
-        text-align: center;
-        width: 520px;
-        
-    }
-  }
-  @media (max-width: 500px) {
-    .games-store ul {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0px 30px;
-    }
-    .games-store {
-        text-align: center;
-        width: 300px;
-        
-    }
-  }
 
   .description-box {
-    width: 250px; /* Adjust the width as needed */
+    width: 225px; /* Adjust the width as needed */
     height: 80px; /* Adjust the max-height as needed */
     overflow-y: auto; /* Enable vertical scrolling when necessary */
     border: 1px solid #ccc;
@@ -220,17 +188,43 @@ button {
 
   form button[type="submit"]:hover,
   button:hover {
-    background: #46494c;
+    background: blue;
   }
   .in-stock form button[type="submit"]:hover,
   button:hover {
     background:blue;
   }
 
-
-  .rating-options{
- 
-
+  
+  @media (max-width: 1020px) {
+    .games-store ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .games-store {
+        text-align: center;
+        width: 620px;
+        
+    }
   }
   
-  
+  @media (max-width: 790px) {
+    .games-store ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .games-store {
+        text-align: center;
+        width: 520px;
+        
+    }
+  }
+  @media (max-width: 500px) {
+    .games-store ul {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px 30px;
+    }
+    .games-store {
+        text-align: center;
+        width: 300px;
+        
+    }
+  }

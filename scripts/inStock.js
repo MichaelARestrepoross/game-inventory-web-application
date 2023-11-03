@@ -1,4 +1,4 @@
-//function to toggle the "In Stock" button
+// function to toggle the "In Stock" button
 function toggleInStock(button) {
     if (button.classList.contains("in-stock")) {
       button.textContent = "Out of Stock";
@@ -16,5 +16,6 @@ function toggleInStock(button) {
   inStockButtons.forEach((button) => {
     button.addEventListener("click", function () {
       toggleInStock(this);
+
     });
   });
