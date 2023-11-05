@@ -11,7 +11,7 @@ h1 {
 
 .image-container {
     position: relative;
-    width: 100%; /* Set the width and height to match your desired image size */
+    width: 100%; 
     height: 120px;
   }
   
@@ -21,12 +21,12 @@ h1 {
     left: 5px;
     width: 100%;
     height: 100%;
-    background-color: #ddd; /* Set your desired background color */
+    background-color: #ddd; 
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: #555; /* Set your desired text color */
+    color: #555; 
     border-radius: 5px;
   }
 
@@ -61,13 +61,12 @@ h1 {
 
   .games-store li {
     padding: 5px;
-    /* padding: 20px; */
   }
 
 
   .description-box {
-    width: 225px; /* Adjust the width as needed */
-    height: 80px; /* Adjust the max-height as needed */
+    width: 225px; 
+    height: 80px; 
     overflow-y: auto; /* Enable vertical scrolling when necessary */
     border: 1px solid #ccc;
     padding: 5px;
@@ -92,7 +91,7 @@ h1 {
 .single-game img {
     display: block;
     margin: 0 auto; /* center the image */
-    max-width: 100%; /* Ensure the image doesn't exceed the width of the list item */
+    max-width: 100%;
     max-height: 100%;
     min-height: 80%;
     border-radius: 5px;
@@ -100,7 +99,7 @@ h1 {
 
 .single-game button {
     display: block; /* Display buttons as block-level elements */
-    margin: 5px 0; /* Add spacing between the buttons and place them on new lines */
+    margin: 5px 0; 
     background: #73956f;
     color: #f7f7f7;
     border: none;
@@ -109,7 +108,7 @@ h1 {
     cursor: pointer;
 }
 
-/* Optional: Style other elements within the list item */
+
 .single-game p {
     margin: 5px 0; /* Add spacing between paragraphs */
 }
@@ -152,11 +151,7 @@ section {
 
 
 
-
-
-
-
-  .rating-options {
+.rating-options {
     display: flex;
     align-items: center;
 }
@@ -195,7 +190,7 @@ button {
     background:blue;
   }
 
-  
+
   @media (max-width: 1020px) {
     .games-store ul {
       grid-template-columns: repeat(3, 1fr);

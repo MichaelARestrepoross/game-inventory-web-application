@@ -1,13 +1,12 @@
-
 // generateGame
 function createGame(name, price, imageURL, rating, description) {
   count++;
   updateCount(count);
   const li = gameTemplate(name, price, imageURL, rating, description)
 
-    //Grab the ul list from the DOM
-    const ul = document.querySelector("ul");
-    ul.append(li);
+  //Grab the ul list from the DOM
+  const ul = document.querySelector("ul");
+  ul.append(li);
 
 }
 
@@ -15,11 +14,10 @@ function gameTemplate(name, price, imageURL, rating, description) {
     const li = document.createElement("li");
     li.classList.add("single-game");
 
-
       // Create a button to toggle "In Stock" status
     const inStockButton = document.createElement("button");
     inStockButton.textContent = 'In Stock';
-    inStockButton.classList.add("in-stock"); // Add the "in-stock" class
+    inStockButton.classList.add("in-stock"); 
     inStockButton.addEventListener('click', function () {
       toggleInStock(this); // Call the toggleInStock function to toggle the button state
     });
@@ -39,7 +37,7 @@ function gameTemplate(name, price, imageURL, rating, description) {
     img.alt = "Game Image";
     
     img.onerror = function() {
-      // Image failed to load, display "No Game Image" message
+      // Image failed to load, display "No Game Image"
       const noImageMessage = li.querySelector('.no-image-message');
       noImageMessage.style.display = 'flex';
       img.style.display = 'none'; // Hide the image
