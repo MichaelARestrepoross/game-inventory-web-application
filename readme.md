@@ -57,6 +57,6 @@ With these comprehensive store functions, you have the tools needed to create an
 
 ### Stretch Goals
 
-- Added  deufalt images for games with unloadable image url's.
+- Added  default images for games with unloadable image url's.
 - Added images for users who wish to have no imput for their desired game.
 - Added a counter for Added and removed games. That is live updated as the user adds or removes games from the game store.
